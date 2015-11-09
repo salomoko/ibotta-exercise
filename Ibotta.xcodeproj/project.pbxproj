@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2F67EFC1BF139C500EBA73C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFB1BF139C500EBA73C /* main.m */; };
+		A2F67EFF1BF139C500EBA73C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFE1BF139C500EBA73C /* AppDelegate.m */; };
+		A2F67F021BF139C500EBA73C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67F011BF139C500EBA73C /* ViewController.m */; };
+		A2F67F051BF139C500EBA73C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F67F031BF139C500EBA73C /* Main.storyboard */; };
+		A2F67F081BF139C500EBA73C /* Ibotta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2F67F061BF139C500EBA73C /* Ibotta.xcdatamodeld */; };
+		A2F67F0A1BF139C500EBA73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F67F091BF139C500EBA73C /* Assets.xcassets */; };
+		A2F67F0D1BF139C500EBA73C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F67F0B1BF139C500EBA73C /* LaunchScreen.storyboard */; };
+		A2F67F181BF139C500EBA73C /* IbottaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67F171BF139C500EBA73C /* IbottaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2F67F141BF139C500EBA73C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2F67EEF1BF139C500EBA73C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2F67EF61BF139C500EBA73C;
+			remoteInfo = Ibotta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2F67EF71BF139C500EBA73C /* Ibotta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ibotta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F67EFB1BF139C500EBA73C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2F67EFD1BF139C500EBA73C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A2F67EFE1BF139C500EBA73C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A2F67F001BF139C500EBA73C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A2F67F011BF139C500EBA73C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A2F67F041BF139C500EBA73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2F67F071BF139C500EBA73C /* Ibotta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ibotta.xcdatamodel; sourceTree = "<group>"; };
+		A2F67F091BF139C500EBA73C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2F67F0C1BF139C500EBA73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2F67F0E1BF139C500EBA73C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2F67F131BF139C500EBA73C /* IbottaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IbottaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F67F171BF139C500EBA73C /* IbottaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IbottaTests.m; sourceTree = "<group>"; };
+		A2F67F191BF139C500EBA73C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2F67EF41BF139C500EBA73C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2F67F101BF139C500EBA73C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2F67EEE1BF139C500EBA73C = {
+			isa = PBXGroup;
+			children = (
+				A2F67EF91BF139C500EBA73C /* Ibotta */,
+				A2F67F161BF139C500EBA73C /* IbottaTests */,
+				A2F67EF81BF139C500EBA73C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2F67EF81BF139C500EBA73C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2F67EF71BF139C500EBA73C /* Ibotta.app */,
+				A2F67F131BF139C500EBA73C /* IbottaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2F67EF91BF139C500EBA73C /* Ibotta */ = {
+			isa = PBXGroup;
+			children = (
+				A2F67EFD1BF139C500EBA73C /* AppDelegate.h */,
+				A2F67EFE1BF139C500EBA73C /* AppDelegate.m */,
+				A2F67F001BF139C500EBA73C /* ViewController.h */,
+				A2F67F011BF139C500EBA73C /* ViewController.m */,
+				A2F67F031BF139C500EBA73C /* Main.storyboard */,
+				A2F67F091BF139C500EBA73C /* Assets.xcassets */,
+				A2F67F0B1BF139C500EBA73C /* LaunchScreen.storyboard */,
+				A2F67F0E1BF139C500EBA73C /* Info.plist */,
+				A2F67F061BF139C500EBA73C /* Ibotta.xcdatamodeld */,
+				A2F67EFA1BF139C500EBA73C /* Supporting Files */,
+			);
+			path = Ibotta;
+			sourceTree = "<group>";
+		};
+		A2F67EFA1BF139C500EBA73C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2F67EFB1BF139C500EBA73C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2F67F161BF139C500EBA73C /* IbottaTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2F67F171BF139C500EBA73C /* IbottaTests.m */,
+				A2F67F191BF139C500EBA73C /* Info.plist */,
+			);
+			path = IbottaTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2F67EF61BF139C500EBA73C /* Ibotta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2F67F1C1BF139C500EBA73C /* Build configuration list for PBXNativeTarget "Ibotta" */;
+			buildPhases = (
+				A2F67EF31BF139C500EBA73C /* Sources */,
+				A2F67EF41BF139C500EBA73C /* Frameworks */,
+				A2F67EF51BF139C500EBA73C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ibotta;
+			productName = Ibotta;
+			productReference = A2F67EF71BF139C500EBA73C /* Ibotta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2F67F121BF139C500EBA73C /* IbottaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2F67F1F1BF139C500EBA73C /* Build configuration list for PBXNativeTarget "IbottaTests" */;
+			buildPhases = (
+				A2F67F0F1BF139C500EBA73C /* Sources */,
+				A2F67F101BF139C500EBA73C /* Frameworks */,
+				A2F67F111BF139C500EBA73C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2F67F151BF139C500EBA73C /* PBXTargetDependency */,
+			);
+			name = IbottaTests;
+			productName = IbottaTests;
+			productReference = A2F67F131BF139C500EBA73C /* IbottaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2F67EEF1BF139C500EBA73C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Salomon Valverde";
+				TargetAttributes = {
+					A2F67EF61BF139C500EBA73C = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 8HD5B2HA3H;
+					};
+					A2F67F121BF139C500EBA73C = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 8HD5B2HA3H;
+						TestTargetID = A2F67EF61BF139C500EBA73C;
+					};
+				};
+			};
+			buildConfigurationList = A2F67EF21BF139C500EBA73C /* Build configuration list for PBXProject "Ibotta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2F67EEE1BF139C500EBA73C;
+			productRefGroup = A2F67EF81BF139C500EBA73C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2F67EF61BF139C500EBA73C /* Ibotta */,
+				A2F67F121BF139C500EBA73C /* IbottaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2F67EF51BF139C500EBA73C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2F67F0D1BF139C500EBA73C /* LaunchScreen.storyboard in Resources */,
+				A2F67F0A1BF139C500EBA73C /* Assets.xcassets in Resources */,
+				A2F67F051BF139C500EBA73C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2F67F111BF139C500EBA73C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2F67EF31BF139C500EBA73C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2F67F021BF139C500EBA73C /* ViewController.m in Sources */,
+				A2F67EFF1BF139C500EBA73C /* AppDelegate.m in Sources */,
+				A2F67F081BF139C500EBA73C /* Ibotta.xcdatamodeld in Sources */,
+				A2F67EFC1BF139C500EBA73C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2F67F0F1BF139C500EBA73C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2F67F181BF139C500EBA73C /* IbottaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2F67F151BF139C500EBA73C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2F67EF61BF139C500EBA73C /* Ibotta */;
+			targetProxy = A2F67F141BF139C500EBA73C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A2F67F031BF139C500EBA73C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2F67F041BF139C500EBA73C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2F67F0B1BF139C500EBA73C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2F67F0C1BF139C500EBA73C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2F67F1A1BF139C500EBA73C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A2F67F1B1BF139C500EBA73C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2F67F1D1BF139C500EBA73C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ibotta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.salomoko.Ibotta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2F67F1E1BF139C500EBA73C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ibotta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.salomoko.Ibotta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A2F67F201BF139C500EBA73C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IbottaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.salomoko.IbottaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ibotta.app/Ibotta";
+			};
+			name = Debug;
+		};
+		A2F67F211BF139C500EBA73C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IbottaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.salomoko.IbottaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ibotta.app/Ibotta";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2F67EF21BF139C500EBA73C /* Build configuration list for PBXProject "Ibotta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2F67F1A1BF139C500EBA73C /* Debug */,
+				A2F67F1B1BF139C500EBA73C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2F67F1C1BF139C500EBA73C /* Build configuration list for PBXNativeTarget "Ibotta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2F67F1D1BF139C500EBA73C /* Debug */,
+				A2F67F1E1BF139C500EBA73C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A2F67F1F1BF139C500EBA73C /* Build configuration list for PBXNativeTarget "IbottaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2F67F201BF139C500EBA73C /* Debug */,
+				A2F67F211BF139C500EBA73C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2F67F061BF139C500EBA73C /* Ibotta.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2F67F071BF139C500EBA73C /* Ibotta.xcdatamodel */,
+			);
+			currentVersion = A2F67F071BF139C500EBA73C /* Ibotta.xcdatamodel */;
+			path = Ibotta.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A2F67EEF1BF139C500EBA73C /* Project object */;
+}
