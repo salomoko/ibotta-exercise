@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87B35C9086FF66D71FED2DBC /* libPods-Ibotta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF041ECB9AF3908E049F4C91 /* libPods-Ibotta.a */; };
 		A2F67EFC1BF139C500EBA73C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFB1BF139C500EBA73C /* main.m */; };
 		A2F67EFF1BF139C500EBA73C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFE1BF139C500EBA73C /* AppDelegate.m */; };
 		A2F67F021BF139C500EBA73C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67F011BF139C500EBA73C /* ViewController.m */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0FB1D4194565DBF9CF139A5 /* Pods-Ibotta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibotta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ibotta/Pods-Ibotta.release.xcconfig"; sourceTree = "<group>"; };
 		A2F67EF71BF139C500EBA73C /* Ibotta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ibotta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F67EFB1BF139C500EBA73C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2F67EFD1BF139C500EBA73C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		A2F67F131BF139C500EBA73C /* IbottaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IbottaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F67F171BF139C500EBA73C /* IbottaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IbottaTests.m; sourceTree = "<group>"; };
 		A2F67F191BF139C500EBA73C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF041ECB9AF3908E049F4C91 /* libPods-Ibotta.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ibotta.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7D53C334D843BE1FB46F82B /* Pods-Ibotta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibotta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ibotta/Pods-Ibotta.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B35C9086FF66D71FED2DBC /* libPods-Ibotta.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +67,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86C0B6592F721C7A4C521BBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF041ECB9AF3908E049F4C91 /* libPods-Ibotta.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A2F67EEE1BF139C500EBA73C = {
 			isa = PBXGroup;
 			children = (
 				A2F67EF91BF139C500EBA73C /* Ibotta */,
 				A2F67F161BF139C500EBA73C /* IbottaTests */,
 				A2F67EF81BF139C500EBA73C /* Products */,
+				D3662DF9A53D44A4DE5F09EC /* Pods */,
+				86C0B6592F721C7A4C521BBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +129,15 @@
 			path = IbottaTests;
 			sourceTree = "<group>";
 		};
+		D3662DF9A53D44A4DE5F09EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7D53C334D843BE1FB46F82B /* Pods-Ibotta.debug.xcconfig */,
+				A0FB1D4194565DBF9CF139A5 /* Pods-Ibotta.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2F67F1C1BF139C500EBA73C /* Build configuration list for PBXNativeTarget "Ibotta" */;
 			buildPhases = (
+				81A16A485C2D81BF3A6566F6 /* Check Pods Manifest.lock */,
 				A2F67EF31BF139C500EBA73C /* Sources */,
 				A2F67EF41BF139C500EBA73C /* Frameworks */,
 				A2F67EF51BF139C500EBA73C /* Resources */,
+				E844306155BA390151D2D426 /* Embed Pods Frameworks */,
+				F220C648BC8236DC547B023F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +237,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81A16A485C2D81BF3A6566F6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E844306155BA390151D2D426 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ibotta/Pods-Ibotta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F220C648BC8236DC547B023F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ibotta/Pods-Ibotta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2F67EF31BF139C500EBA73C /* Sources */ = {
@@ -343,6 +418,7 @@
 		};
 		A2F67F1D1BF139C500EBA73C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7D53C334D843BE1FB46F82B /* Pods-Ibotta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Ibotta/Info.plist;
@@ -354,6 +430,7 @@
 		};
 		A2F67F1E1BF139C500EBA73C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0FB1D4194565DBF9CF139A5 /* Pods-Ibotta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Ibotta/Info.plist;
@@ -406,6 +483,7 @@
 				A2F67F1E1BF139C500EBA73C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2F67F1F1BF139C500EBA73C /* Build configuration list for PBXNativeTarget "IbottaTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +492,7 @@
 				A2F67F211BF139C500EBA73C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,0 +1,13 @@
+# xcode noise
+*.xcuserstate
+*.xcworkspace/
+xcuserdata/
+xcshareddata/
+*.xccheckout
+
+# osx noise
+.DS_Store
+profile
+
+# CocoaPods
+Pods/*
