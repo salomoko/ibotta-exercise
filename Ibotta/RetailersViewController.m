@@ -6,13 +6,13 @@
 //  Copyright © 2015 Salomon Valverde. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RetailersViewController.h"
 
-@interface ViewController ()
+@interface RetailersViewController ()
 
 @end
 
-@implementation ViewController
+@implementation RetailersViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

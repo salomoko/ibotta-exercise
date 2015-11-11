@@ -6,11 +6,28 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A28FE9261BF3F26C00772039 /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A28FE9271BF3F26C00772039 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				A28FE92A1BF3F28600772039 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		87B35C9086FF66D71FED2DBC /* libPods-Ibotta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF041ECB9AF3908E049F4C91 /* libPods-Ibotta.a */; };
+		A28FE9241BF3E81700772039 /* IbottaAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE9231BF3E81700772039 /* IbottaAPI.m */; };
+		A28FE9321BF3F52500772039 /* _Retailer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE92F1BF3F52500772039 /* _Retailer.m */; };
+		A28FE9331BF3F52500772039 /* Retailer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE9311BF3F52500772039 /* Retailer.m */; };
 		A2F67EFC1BF139C500EBA73C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFB1BF139C500EBA73C /* main.m */; };
 		A2F67EFF1BF139C500EBA73C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFE1BF139C500EBA73C /* AppDelegate.m */; };
-		A2F67F021BF139C500EBA73C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67F011BF139C500EBA73C /* ViewController.m */; };
+		A2F67F021BF139C500EBA73C /* RetailersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67F011BF139C500EBA73C /* RetailersViewController.m */; };
 		A2F67F051BF139C500EBA73C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F67F031BF139C500EBA73C /* Main.storyboard */; };
 		A2F67F081BF139C500EBA73C /* Ibotta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2F67F061BF139C500EBA73C /* Ibotta.xcdatamodeld */; };
 		A2F67F0A1BF139C500EBA73C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F67F091BF139C500EBA73C /* Assets.xcassets */; };
@@ -30,12 +47,18 @@
 
 /* Begin PBXFileReference section */
 		A0FB1D4194565DBF9CF139A5 /* Pods-Ibotta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibotta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ibotta/Pods-Ibotta.release.xcconfig"; sourceTree = "<group>"; };
+		A28FE9221BF3E81700772039 /* IbottaAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IbottaAPI.h; sourceTree = "<group>"; };
+		A28FE9231BF3E81700772039 /* IbottaAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IbottaAPI.m; sourceTree = "<group>"; };
+		A28FE92E1BF3F52500772039 /* _Retailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Retailer.h; sourceTree = "<group>"; };
+		A28FE92F1BF3F52500772039 /* _Retailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Retailer.m; sourceTree = "<group>"; };
+		A28FE9301BF3F52500772039 /* Retailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Retailer.h; sourceTree = "<group>"; };
+		A28FE9311BF3F52500772039 /* Retailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Retailer.m; sourceTree = "<group>"; };
 		A2F67EF71BF139C500EBA73C /* Ibotta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ibotta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F67EFB1BF139C500EBA73C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2F67EFD1BF139C500EBA73C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A2F67EFE1BF139C500EBA73C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A2F67F001BF139C500EBA73C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A2F67F011BF139C500EBA73C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A2F67F001BF139C500EBA73C /* RetailersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetailersViewController.h; sourceTree = "<group>"; };
+		A2F67F011BF139C500EBA73C /* RetailersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetailersViewController.m; sourceTree = "<group>"; };
 		A2F67F041BF139C500EBA73C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2F67F071BF139C500EBA73C /* Ibotta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ibotta.xcdatamodel; sourceTree = "<group>"; };
 		A2F67F091BF139C500EBA73C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +98,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A28FE92D1BF3F52500772039 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A28FE92E1BF3F52500772039 /* _Retailer.h */,
+				A28FE92F1BF3F52500772039 /* _Retailer.m */,
+				A28FE9301BF3F52500772039 /* Retailer.h */,
+				A28FE9311BF3F52500772039 /* Retailer.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A2F67EEE1BF139C500EBA73C = {
 			isa = PBXGroup;
 			children = (
@@ -98,16 +132,19 @@
 		A2F67EF91BF139C500EBA73C /* Ibotta */ = {
 			isa = PBXGroup;
 			children = (
+				A28FE92D1BF3F52500772039 /* Models */,
 				A2F67EFD1BF139C500EBA73C /* AppDelegate.h */,
 				A2F67EFE1BF139C500EBA73C /* AppDelegate.m */,
-				A2F67F001BF139C500EBA73C /* ViewController.h */,
-				A2F67F011BF139C500EBA73C /* ViewController.m */,
+				A2F67F001BF139C500EBA73C /* RetailersViewController.h */,
+				A2F67F011BF139C500EBA73C /* RetailersViewController.m */,
 				A2F67F031BF139C500EBA73C /* Main.storyboard */,
 				A2F67F091BF139C500EBA73C /* Assets.xcassets */,
 				A2F67F0B1BF139C500EBA73C /* LaunchScreen.storyboard */,
 				A2F67F0E1BF139C500EBA73C /* Info.plist */,
 				A2F67F061BF139C500EBA73C /* Ibotta.xcdatamodeld */,
 				A2F67EFA1BF139C500EBA73C /* Supporting Files */,
+				A28FE9221BF3E81700772039 /* IbottaAPI.h */,
+				A28FE9231BF3E81700772039 /* IbottaAPI.m */,
 			);
 			path = Ibotta;
 			sourceTree = "<group>";
@@ -188,6 +225,10 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Salomon Valverde";
 				TargetAttributes = {
+					A28FE9261BF3F26C00772039 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 8HD5B2HA3H;
+					};
 					A2F67EF61BF139C500EBA73C = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 8HD5B2HA3H;
@@ -214,6 +255,7 @@
 			targets = (
 				A2F67EF61BF139C500EBA73C /* Ibotta */,
 				A2F67F121BF139C500EBA73C /* IbottaTests */,
+				A28FE9261BF3F26C00772039 /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -254,6 +296,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		A28FE92A1BF3F28600772039 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m Ibotta/Ibotta.xcdatamodeld -O Ibotta/Models --template-var arc=true";
+		};
 		E844306155BA390151D2D426 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,10 +346,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2F67F021BF139C500EBA73C /* ViewController.m in Sources */,
+				A2F67F021BF139C500EBA73C /* RetailersViewController.m in Sources */,
 				A2F67EFF1BF139C500EBA73C /* AppDelegate.m in Sources */,
 				A2F67F081BF139C500EBA73C /* Ibotta.xcdatamodeld in Sources */,
+				A28FE9331BF3F52500772039 /* Retailer.m in Sources */,
+				A28FE9241BF3E81700772039 /* IbottaAPI.m in Sources */,
 				A2F67EFC1BF139C500EBA73C /* main.m in Sources */,
+				A28FE9321BF3F52500772039 /* _Retailer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +394,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A28FE9281BF3F26C00772039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A28FE9291BF3F26C00772039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A2F67F1A1BF139C500EBA73C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -467,6 +539,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A28FE9271BF3F26C00772039 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A28FE9281BF3F26C00772039 /* Debug */,
+				A28FE9291BF3F26C00772039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A2F67EF21BF139C500EBA73C /* Build configuration list for PBXProject "Ibotta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

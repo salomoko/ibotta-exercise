@@ -4,7 +4,9 @@ platform :ios, '7.0'
 # use_frameworks!
 
 target 'Ibotta' do
-   pod "AFNetworking", "~> 2.0"
+   pod 'AFNetworking', '~> 2.0'
+   pod 'MBLocationManager'
+   pod 'M13ProgressSuite', '~> 1.2.7'
 end
 
 target 'IbottaTests' do
