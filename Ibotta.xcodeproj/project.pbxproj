@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		87B35C9086FF66D71FED2DBC /* libPods-Ibotta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF041ECB9AF3908E049F4C91 /* libPods-Ibotta.a */; };
+		A2539F5E1BF40E13003A7327 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2539F5D1BF40E13003A7327 /* QuartzCore.framework */; };
+		A2539F611BF4115C003A7327 /* UIColor+Ibotta.m in Sources */ = {isa = PBXBuildFile; fileRef = A2539F601BF4115C003A7327 /* UIColor+Ibotta.m */; };
 		A28FE9241BF3E81700772039 /* IbottaAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE9231BF3E81700772039 /* IbottaAPI.m */; };
 		A28FE9321BF3F52500772039 /* _Retailer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE92F1BF3F52500772039 /* _Retailer.m */; };
 		A28FE9331BF3F52500772039 /* Retailer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE9311BF3F52500772039 /* Retailer.m */; };
@@ -47,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		A0FB1D4194565DBF9CF139A5 /* Pods-Ibotta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibotta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ibotta/Pods-Ibotta.release.xcconfig"; sourceTree = "<group>"; };
+		A2539F5D1BF40E13003A7327 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A2539F5F1BF4115C003A7327 /* UIColor+Ibotta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Ibotta.h"; sourceTree = "<group>"; };
+		A2539F601BF4115C003A7327 /* UIColor+Ibotta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Ibotta.m"; sourceTree = "<group>"; };
 		A28FE9221BF3E81700772039 /* IbottaAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IbottaAPI.h; sourceTree = "<group>"; };
 		A28FE9231BF3E81700772039 /* IbottaAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IbottaAPI.m; sourceTree = "<group>"; };
 		A28FE92E1BF3F52500772039 /* _Retailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Retailer.h; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2539F5E1BF40E13003A7327 /* QuartzCore.framework in Frameworks */,
 				87B35C9086FF66D71FED2DBC /* libPods-Ibotta.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,9 +99,19 @@
 		86C0B6592F721C7A4C521BBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2539F5D1BF40E13003A7327 /* QuartzCore.framework */,
 				EF041ECB9AF3908E049F4C91 /* libPods-Ibotta.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2539F621BF426FF003A7327 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A2539F5F1BF4115C003A7327 /* UIColor+Ibotta.h */,
+				A2539F601BF4115C003A7327 /* UIColor+Ibotta.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		A28FE92D1BF3F52500772039 /* Models */ = {
@@ -145,6 +161,7 @@
 				A2F67EFA1BF139C500EBA73C /* Supporting Files */,
 				A28FE9221BF3E81700772039 /* IbottaAPI.h */,
 				A28FE9231BF3E81700772039 /* IbottaAPI.m */,
+				A2539F621BF426FF003A7327 /* Categories */,
 			);
 			path = Ibotta;
 			sourceTree = "<group>";
@@ -352,6 +369,7 @@
 				A28FE9331BF3F52500772039 /* Retailer.m in Sources */,
 				A28FE9241BF3E81700772039 /* IbottaAPI.m in Sources */,
 				A2F67EFC1BF139C500EBA73C /* main.m in Sources */,
+				A2539F611BF4115C003A7327 /* UIColor+Ibotta.m in Sources */,
 				A28FE9321BF3F52500772039 /* _Retailer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +564,7 @@
 				A28FE9291BF3F26C00772039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2F67EF21BF139C500EBA73C /* Build configuration list for PBXProject "Ibotta" */ = {
 			isa = XCConfigurationList;

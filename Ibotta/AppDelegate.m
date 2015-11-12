@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "IbottaAPI.h"
 
 @interface AppDelegate ()
 
@@ -15,11 +14,14 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)sharedInstance
+{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[IbottaAPI sharedInstance] retrieveRetailers];
     
     return YES;
 }

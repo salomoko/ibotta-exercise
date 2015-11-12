@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^ CompletionHandler)(id, NSError *error);
+
 @interface IbottaAPI : NSObject
 
 + (instancetype)sharedInstance;
-- (void)retrieveRetailers;
+- (void)retrieveRetailersWith:(CompletionHandler)completionHandler;
 
 @end

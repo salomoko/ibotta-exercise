@@ -34,6 +34,12 @@ extern const struct RetailerAttributes {
 
 //- (BOOL)validateServerID:(id*)value_ error:(NSError**)error_;
 
++ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ ;
++ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ error:(NSError**)error_;
+
++ (id)fetchOneRetailerWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ ;
++ (id)fetchOneRetailerWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ error:(NSError**)error_;
+
 @end
 
 @interface _Retailer (CoreDataGeneratedPrimitiveAccessors)

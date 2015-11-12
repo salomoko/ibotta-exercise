@@ -5,6 +5,8 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
+    <fetchRequest name="allRetailers" entity="Retailer"/>
+    <fetchRequest name="oneRetailerWithServerID" entity="Retailer" predicateString="serverID == $serverID"/>
     <elements>
         <element name="Retailer" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>

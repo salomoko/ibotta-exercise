@@ -6,7 +6,7 @@ platform :ios, '7.0'
 target 'Ibotta' do
    pod 'AFNetworking', '~> 2.0'
    pod 'MBLocationManager'
-   pod 'M13ProgressSuite', '~> 1.2.7'
+   pod 'SVProgressHUD'
 end
 
 target 'IbottaTests' do

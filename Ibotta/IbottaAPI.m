@@ -23,7 +23,7 @@ static NSString * const APIBaseURL = @"http://salomon.io/ibotta/";
     return sharedInstance;
 }
 
-- (void)retrieveRetailers {
+- (void)retrieveRetailersWith:(CompletionHandler)completionHandler {
     
 
     NSString *string = [NSString stringWithFormat:@"%@Retailers.json", APIBaseURL];
@@ -35,11 +35,12 @@ static NSString * const APIBaseURL = @"http://salomon.io/ibotta/";
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        NSLog(@"Retailers:\n%@", [responseObject description]);
+        return completionHandler(responseObject,nil);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
-        NSLog(@"Retailers Error:\n%@", [error description]);
+        NSLog(@"AFHTTPRequestOperation:failure:\n%@", [error description]);
+        return completionHandler(nil,error);
     }];
     
     [operation start];

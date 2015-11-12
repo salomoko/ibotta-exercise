@@ -7,6 +7,10 @@
 //
 
 #import "RetailersViewController.h"
+#import "IbottaAPI.h"
+#import "SVProgressHUD.h"
+#import "UIColor+Ibotta.h"
+#import "Retailer.h"
 
 @interface RetailersViewController ()
 
@@ -17,6 +21,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [SVProgressHUD setForegroundColor:[UIColor colorWithIbottaPink]];
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithIbottaBiege]];
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    [[IbottaAPI sharedInstance] retrieveRetailersWith:^(id data, NSError *error) {
+        if (data != nil) {
+            
+            NSArray *retailers = [data objectForKey:@"retailers"];
+            if (retailers.count > 0)
+                [Retailer processResponse:retailers];
+            
+        } else {
+            NSLog(@"IbottaAPI Request failed.");
+            NSLog(@"Error:\n%@", [error description]);
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

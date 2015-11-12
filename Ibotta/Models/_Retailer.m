@@ -68,5 +68,85 @@ const struct RetailerAttributes RetailerAttributes = {
 	[self setPrimitiveServerID:[NSNumber numberWithInt:value_]];
 }
 
++ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ {
+	NSError *error = nil;
+	NSArray *result = [self fetchAllRetailers:moc_ error:&error];
+	if (error) {
+#ifdef NSAppKitVersionNumber10_0
+		[NSApp presentError:error];
+#else
+		NSLog(@"error: %@", error);
+#endif
+	}
+	return result;
+}
++ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ error:(NSError**)error_ {
+	NSParameterAssert(moc_);
+	NSError *error = nil;
+
+	NSManagedObjectModel *model = [[moc_ persistentStoreCoordinator] managedObjectModel];
+
+	NSDictionary *substitutionVariables = [NSDictionary dictionary];
+
+	NSFetchRequest *fetchRequest = [model fetchRequestFromTemplateWithName:@"allRetailers"
+													 substitutionVariables:substitutionVariables];
+	NSAssert(fetchRequest, @"Can't find fetch request named \"allRetailers\".");
+
+	NSArray *result = [moc_ executeFetchRequest:fetchRequest error:&error];
+	if (error_) *error_ = error;
+	return result;
+}
+
++ (id)fetchOneRetailerWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ {
+	NSError *error = nil;
+	id result = [self fetchOneRetailerWithServerID:moc_ serverID:serverID_ error:&error];
+	if (error) {
+#ifdef NSAppKitVersionNumber10_0
+		[NSApp presentError:error];
+#else
+		NSLog(@"error: %@", error);
+#endif
+	}
+	return result;
+}
++ (id)fetchOneRetailerWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ error:(NSError**)error_ {
+	NSParameterAssert(moc_);
+	NSError *error = nil;
+
+	NSManagedObjectModel *model = [[moc_ persistentStoreCoordinator] managedObjectModel];
+
+	NSDictionary *substitutionVariables = [NSDictionary dictionaryWithObjectsAndKeys:
+
+														serverID_, @"serverID",
+
+														nil];
+
+	NSFetchRequest *fetchRequest = [model fetchRequestFromTemplateWithName:@"oneRetailerWithServerID"
+													 substitutionVariables:substitutionVariables];
+	NSAssert(fetchRequest, @"Can't find fetch request named \"oneRetailerWithServerID\".");
+
+	id result = nil;
+	NSArray *results = [moc_ executeFetchRequest:fetchRequest error:&error];
+
+	if (!error) {
+		switch ([results count]) {
+			case 0:
+				//	Nothing found matching the fetch request. That's cool, though: we'll just return nil.
+				break;
+			case 1:
+				result = [results objectAtIndex:0];
+				break;
+			default:
+				NSLog(@"WARN fetch request oneRetailerWithServerID: 0 or 1 objects expected, %lu found (substitutionVariables:%@, results:%@)",
+					(unsigned long)[results count],
+					substitutionVariables,
+					results);
+		}
+	}
+
+	if (error_) *error_ = error;
+	return result;
+}
+
 @end
 
