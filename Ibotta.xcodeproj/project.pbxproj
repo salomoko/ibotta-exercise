@@ -27,6 +27,7 @@
 		A28FE9241BF3E81700772039 /* IbottaAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE9231BF3E81700772039 /* IbottaAPI.m */; };
 		A28FE9321BF3F52500772039 /* _Retailer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE92F1BF3F52500772039 /* _Retailer.m */; };
 		A28FE9331BF3F52500772039 /* Retailer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE9311BF3F52500772039 /* Retailer.m */; };
+		A290C0621BF4617400AE1684 /* RetailerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A290C0611BF4617400AE1684 /* RetailerCell.m */; };
 		A2F67EFC1BF139C500EBA73C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFB1BF139C500EBA73C /* main.m */; };
 		A2F67EFF1BF139C500EBA73C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFE1BF139C500EBA73C /* AppDelegate.m */; };
 		A2F67F021BF139C500EBA73C /* RetailersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67F011BF139C500EBA73C /* RetailersViewController.m */; };
@@ -58,6 +59,8 @@
 		A28FE92F1BF3F52500772039 /* _Retailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Retailer.m; sourceTree = "<group>"; };
 		A28FE9301BF3F52500772039 /* Retailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Retailer.h; sourceTree = "<group>"; };
 		A28FE9311BF3F52500772039 /* Retailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Retailer.m; sourceTree = "<group>"; };
+		A290C0601BF4617400AE1684 /* RetailerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetailerCell.h; sourceTree = "<group>"; };
+		A290C0611BF4617400AE1684 /* RetailerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetailerCell.m; sourceTree = "<group>"; };
 		A2F67EF71BF139C500EBA73C /* Ibotta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ibotta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F67EFB1BF139C500EBA73C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2F67EFD1BF139C500EBA73C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				A28FE9221BF3E81700772039 /* IbottaAPI.h */,
 				A28FE9231BF3E81700772039 /* IbottaAPI.m */,
 				A2539F621BF426FF003A7327 /* Categories */,
+				A290C0601BF4617400AE1684 /* RetailerCell.h */,
+				A290C0611BF4617400AE1684 /* RetailerCell.m */,
 			);
 			path = Ibotta;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 			files = (
 				A2F67F021BF139C500EBA73C /* RetailersViewController.m in Sources */,
 				A2F67EFF1BF139C500EBA73C /* AppDelegate.m in Sources */,
+				A290C0621BF4617400AE1684 /* RetailerCell.m in Sources */,
 				A2F67F081BF139C500EBA73C /* Ibotta.xcdatamodeld in Sources */,
 				A28FE9331BF3F52500772039 /* Retailer.m in Sources */,
 				A28FE9241BF3E81700772039 /* IbottaAPI.m in Sources */,
