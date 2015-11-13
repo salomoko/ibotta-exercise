@@ -1,39 +1,42 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to Retailer.m instead.
+// Make changes to Offer.m instead.
 
-#import "_Retailer.h"
+#import "_Offer.h"
 
-const struct RetailerAttributes RetailerAttributes = {
+const struct OfferAttributes OfferAttributes = {
+	.amount = @"amount",
+	.desc = @"desc",
 	.iconURL = @"iconURL",
 	.name = @"name",
 	.serverID = @"serverID",
+	.totalLikes = @"totalLikes",
 };
 
-const struct RetailerRelationships RetailerRelationships = {
-	.offers = @"offers",
+const struct OfferRelationships OfferRelationships = {
+	.retailer = @"retailer",
 };
 
-@implementation RetailerID
+@implementation OfferID
 @end
 
-@implementation _Retailer
+@implementation _Offer
 
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription insertNewObjectForEntityForName:@"Retailer" inManagedObjectContext:moc_];
+	return [NSEntityDescription insertNewObjectForEntityForName:@"Offer" inManagedObjectContext:moc_];
 }
 
 + (NSString*)entityName {
-	return @"Retailer";
+	return @"Offer";
 }
 
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription entityForName:@"Retailer" inManagedObjectContext:moc_];
+	return [NSEntityDescription entityForName:@"Offer" inManagedObjectContext:moc_];
 }
 
-- (RetailerID*)objectID {
-	return (RetailerID*)[super objectID];
+- (OfferID*)objectID {
+	return (OfferID*)[super objectID];
 }
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
@@ -44,9 +47,18 @@ const struct RetailerRelationships RetailerRelationships = {
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
+	if ([key isEqualToString:@"totalLikesValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"totalLikes"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
 
 	return keyPaths;
 }
+
+@dynamic amount;
+
+@dynamic desc;
 
 @dynamic iconURL;
 
@@ -72,20 +84,31 @@ const struct RetailerRelationships RetailerRelationships = {
 	[self setPrimitiveServerID:@(value_)];
 }
 
-@dynamic offers;
+@dynamic totalLikes;
 
-- (NSMutableSet*)offersSet {
-	[self willAccessValueForKey:@"offers"];
-
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"offers"];
-
-	[self didAccessValueForKey:@"offers"];
-	return result;
+- (int32_t)totalLikesValue {
+	NSNumber *result = [self totalLikes];
+	return [result intValue];
 }
 
-+ (id)fetchOneRetailerWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ {
+- (void)setTotalLikesValue:(int32_t)value_ {
+	[self setTotalLikes:@(value_)];
+}
+
+- (int32_t)primitiveTotalLikesValue {
+	NSNumber *result = [self primitiveTotalLikes];
+	return [result intValue];
+}
+
+- (void)setPrimitiveTotalLikesValue:(int32_t)value_ {
+	[self setPrimitiveTotalLikes:@(value_)];
+}
+
+@dynamic retailer;
+
++ (id)fetchOneOfferWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ {
 	NSError *error = nil;
-	id result = [self fetchOneRetailerWithServerID:moc_ serverID:serverID_ error:&error];
+	id result = [self fetchOneOfferWithServerID:moc_ serverID:serverID_ error:&error];
 	if (error) {
 #ifdef NSAppKitVersionNumber10_0
 		[NSApp presentError:error];
@@ -95,7 +118,7 @@ const struct RetailerRelationships RetailerRelationships = {
 	}
 	return result;
 }
-+ (id)fetchOneRetailerWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ error:(NSError**)error_ {
++ (id)fetchOneOfferWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ error:(NSError**)error_ {
 	NSParameterAssert(moc_);
 	NSError *error = nil;
 
@@ -107,9 +130,9 @@ const struct RetailerRelationships RetailerRelationships = {
 
 														nil];
 
-	NSFetchRequest *fetchRequest = [model fetchRequestFromTemplateWithName:@"oneRetailerWithServerID"
+	NSFetchRequest *fetchRequest = [model fetchRequestFromTemplateWithName:@"oneOfferWithServerID"
 													 substitutionVariables:substitutionVariables];
-	NSAssert(fetchRequest, @"Can't find fetch request named \"oneRetailerWithServerID\".");
+	NSAssert(fetchRequest, @"Can't find fetch request named \"oneOfferWithServerID\".");
 
 	id result = nil;
 	NSArray *results = [moc_ executeFetchRequest:fetchRequest error:&error];
@@ -123,7 +146,7 @@ const struct RetailerRelationships RetailerRelationships = {
 				result = [results objectAtIndex:0];
 				break;
 			default:
-				NSLog(@"WARN fetch request oneRetailerWithServerID: 0 or 1 objects expected, %lu found (substitutionVariables:%@, results:%@)",
+				NSLog(@"WARN fetch request oneOfferWithServerID: 0 or 1 objects expected, %lu found (substitutionVariables:%@, results:%@)",
 					(unsigned long)[results count],
 					substitutionVariables,
 					results);
@@ -134,9 +157,9 @@ const struct RetailerRelationships RetailerRelationships = {
 	return result;
 }
 
-+ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ {
++ (NSArray*)fetchAllOffers:(NSManagedObjectContext*)moc_ {
 	NSError *error = nil;
-	NSArray *result = [self fetchAllRetailers:moc_ error:&error];
+	NSArray *result = [self fetchAllOffers:moc_ error:&error];
 	if (error) {
 #ifdef NSAppKitVersionNumber10_0
 		[NSApp presentError:error];
@@ -146,7 +169,7 @@ const struct RetailerRelationships RetailerRelationships = {
 	}
 	return result;
 }
-+ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ error:(NSError**)error_ {
++ (NSArray*)fetchAllOffers:(NSManagedObjectContext*)moc_ error:(NSError**)error_ {
 	NSParameterAssert(moc_);
 	NSError *error = nil;
 
@@ -154,9 +177,9 @@ const struct RetailerRelationships RetailerRelationships = {
 
 	NSDictionary *substitutionVariables = [NSDictionary dictionary];
 
-	NSFetchRequest *fetchRequest = [model fetchRequestFromTemplateWithName:@"allRetailers"
+	NSFetchRequest *fetchRequest = [model fetchRequestFromTemplateWithName:@"allOffers"
 													 substitutionVariables:substitutionVariables];
-	NSAssert(fetchRequest, @"Can't find fetch request named \"allRetailers\".");
+	NSAssert(fetchRequest, @"Can't find fetch request named \"allOffers\".");
 
 	NSArray *result = [moc_ executeFetchRequest:fetchRequest error:&error];
 	if (error_) *error_ = error;

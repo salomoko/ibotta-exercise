@@ -14,6 +14,7 @@
 #import "SVProgressHUD.h"
 #import "UIColor+Ibotta.h"
 #import "Retailer.h"
+#import "Offer.h"
 
 @interface RetailersViewController ()
 
@@ -55,12 +56,7 @@
 
 - (void)fetchRetailers {
     
-    // TODO
-    // setup progress for deterministic loading indicator. perhaps with KVO
-    [SVProgressHUD setForegroundColor:[UIColor colorWithIbottaPink]];
-    [SVProgressHUD setBackgroundColor:[UIColor colorWithIbottaBiege]];
-    [SVProgressHUD showWithStatus:@"Loading..."];
-    
+    [self displayLoadingIndicator];
     [[IbottaAPI sharedInstance] retrieveRetailersWith:^(id data, NSError *error) {
         if (data != nil) {
             
@@ -76,9 +72,41 @@
     }];
 }
 
+- (void)fetchOffers {
+    
+    [self displayLoadingIndicator];
+    [[IbottaAPI sharedInstance] retrieveOffersWith:^(id data, NSError *error) {
+        if (data != nil) {
+            
+            NSArray *offers = [data objectForKey:@"offers"];
+            NSLog(@"offers:\n%@", [offers description]);
+            if (offers.count > 0) {
+                [Offer processResponse:offers];
+            }
+            
+        } else {
+            NSLog(@"IbottaAPI Request failed.");
+            NSLog(@"Error:\n%@", [error description]);
+        }
+    }];
+}
+
+- (void)displayLoadingIndicator {
+    
+    // TODO
+    // setup progress for deterministic loading indicator. perhaps with KVO
+    [SVProgressHUD setForegroundColor:[UIColor colorWithIbottaPink]];
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithIbottaBiege]];
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    [SVProgressHUD popActivity];
+}
+
 - (void)mocSaved:(NSNotification*)notification {
     
-//    NSLog(@"mocSaved:\n %@", [notification description]);
+    NSSet *mo = [notification.userInfo objectForKey:NSInsertedObjectsKey];
+
+//    [self fetchOffers]; // TODO only call this once!
+//    http://stackoverflow.com/questions/5837643/how-do-i-check-if-an-nsset-contains-an-object-of-a-kind-of-class
     
     [SVProgressHUD dismiss]; // dismiss any loading indicator
 }
@@ -151,6 +179,16 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     return 80.0;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+#pragma mark - Navigation
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning {

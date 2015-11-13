@@ -28,6 +28,9 @@
 		A28FE9321BF3F52500772039 /* _Retailer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE92F1BF3F52500772039 /* _Retailer.m */; };
 		A28FE9331BF3F52500772039 /* Retailer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28FE9311BF3F52500772039 /* Retailer.m */; };
 		A290C0621BF4617400AE1684 /* RetailerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A290C0611BF4617400AE1684 /* RetailerCell.m */; };
+		A2DF8F1D1BF5C119001FFDFB /* _Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DF8F1A1BF5C119001FFDFB /* _Offer.m */; };
+		A2DF8F1E1BF5C119001FFDFB /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DF8F1C1BF5C119001FFDFB /* Offer.m */; };
+		A2DF8F211BF5CD19001FFDFB /* OffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DF8F201BF5CD19001FFDFB /* OffersViewController.m */; };
 		A2F67EFC1BF139C500EBA73C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFB1BF139C500EBA73C /* main.m */; };
 		A2F67EFF1BF139C500EBA73C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67EFE1BF139C500EBA73C /* AppDelegate.m */; };
 		A2F67F021BF139C500EBA73C /* RetailersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F67F011BF139C500EBA73C /* RetailersViewController.m */; };
@@ -61,6 +64,12 @@
 		A28FE9311BF3F52500772039 /* Retailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Retailer.m; sourceTree = "<group>"; };
 		A290C0601BF4617400AE1684 /* RetailerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetailerCell.h; sourceTree = "<group>"; };
 		A290C0611BF4617400AE1684 /* RetailerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetailerCell.m; sourceTree = "<group>"; };
+		A2DF8F191BF5C119001FFDFB /* _Offer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Offer.h; sourceTree = "<group>"; };
+		A2DF8F1A1BF5C119001FFDFB /* _Offer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Offer.m; sourceTree = "<group>"; };
+		A2DF8F1B1BF5C119001FFDFB /* Offer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Offer.h; sourceTree = "<group>"; };
+		A2DF8F1C1BF5C119001FFDFB /* Offer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Offer.m; sourceTree = "<group>"; };
+		A2DF8F1F1BF5CD19001FFDFB /* OffersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OffersViewController.h; sourceTree = "<group>"; };
+		A2DF8F201BF5CD19001FFDFB /* OffersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OffersViewController.m; sourceTree = "<group>"; };
 		A2F67EF71BF139C500EBA73C /* Ibotta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ibotta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F67EFB1BF139C500EBA73C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2F67EFD1BF139C500EBA73C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,12 +129,36 @@
 		A28FE92D1BF3F52500772039 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A2DF8F191BF5C119001FFDFB /* _Offer.h */,
+				A2DF8F1A1BF5C119001FFDFB /* _Offer.m */,
+				A2DF8F1B1BF5C119001FFDFB /* Offer.h */,
+				A2DF8F1C1BF5C119001FFDFB /* Offer.m */,
 				A28FE92E1BF3F52500772039 /* _Retailer.h */,
 				A28FE92F1BF3F52500772039 /* _Retailer.m */,
 				A28FE9301BF3F52500772039 /* Retailer.h */,
 				A28FE9311BF3F52500772039 /* Retailer.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A2DF8F231BF5CD31001FFDFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2F67F001BF139C500EBA73C /* RetailersViewController.h */,
+				A2F67F011BF139C500EBA73C /* RetailersViewController.m */,
+				A2DF8F1F1BF5CD19001FFDFB /* OffersViewController.h */,
+				A2DF8F201BF5CD19001FFDFB /* OffersViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A2DF8F241BF5CD46001FFDFB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A290C0601BF4617400AE1684 /* RetailerCell.h */,
+				A290C0611BF4617400AE1684 /* RetailerCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		A2F67EEE1BF139C500EBA73C = {
@@ -154,8 +187,7 @@
 				A28FE92D1BF3F52500772039 /* Models */,
 				A2F67EFD1BF139C500EBA73C /* AppDelegate.h */,
 				A2F67EFE1BF139C500EBA73C /* AppDelegate.m */,
-				A2F67F001BF139C500EBA73C /* RetailersViewController.h */,
-				A2F67F011BF139C500EBA73C /* RetailersViewController.m */,
+				A2DF8F231BF5CD31001FFDFB /* ViewControllers */,
 				A2F67F031BF139C500EBA73C /* Main.storyboard */,
 				A2F67F091BF139C500EBA73C /* Assets.xcassets */,
 				A2F67F0B1BF139C500EBA73C /* LaunchScreen.storyboard */,
@@ -165,8 +197,7 @@
 				A28FE9221BF3E81700772039 /* IbottaAPI.h */,
 				A28FE9231BF3E81700772039 /* IbottaAPI.m */,
 				A2539F621BF426FF003A7327 /* Categories */,
-				A290C0601BF4617400AE1684 /* RetailerCell.h */,
-				A290C0611BF4617400AE1684 /* RetailerCell.m */,
+				A2DF8F241BF5CD46001FFDFB /* Views */,
 			);
 			path = Ibotta;
 			sourceTree = "<group>";
@@ -329,7 +360,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mogenerator -m Ibotta/Ibotta.xcdatamodeld -O Ibotta/Models --template-var arc=true";
+			shellScript = "mogenerator --v2 -m Ibotta/Ibotta.xcdatamodeld -O Ibotta/Models --template-var arc=true";
 		};
 		E844306155BA390151D2D426 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -369,13 +400,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2F67F021BF139C500EBA73C /* RetailersViewController.m in Sources */,
+				A2DF8F211BF5CD19001FFDFB /* OffersViewController.m in Sources */,
 				A2F67EFF1BF139C500EBA73C /* AppDelegate.m in Sources */,
 				A290C0621BF4617400AE1684 /* RetailerCell.m in Sources */,
 				A2F67F081BF139C500EBA73C /* Ibotta.xcdatamodeld in Sources */,
 				A28FE9331BF3F52500772039 /* Retailer.m in Sources */,
+				A2DF8F1E1BF5C119001FFDFB /* Offer.m in Sources */,
 				A28FE9241BF3E81700772039 /* IbottaAPI.m in Sources */,
 				A2F67EFC1BF139C500EBA73C /* main.m in Sources */,
 				A2539F611BF4115C003A7327 /* UIColor+Ibotta.m in Sources */,
+				A2DF8F1D1BF5C119001FFDFB /* _Offer.m in Sources */,
 				A28FE9321BF3F52500772039 /* _Retailer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

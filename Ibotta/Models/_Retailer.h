@@ -1,13 +1,19 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to Retailer.h instead.
 
-#import <CoreData/CoreData.h>
+@import CoreData;
 
 extern const struct RetailerAttributes {
 	__unsafe_unretained NSString *iconURL;
 	__unsafe_unretained NSString *name;
 	__unsafe_unretained NSString *serverID;
 } RetailerAttributes;
+
+extern const struct RetailerRelationships {
+	__unsafe_unretained NSString *offers;
+} RetailerRelationships;
+
+@class Offer;
 
 @interface RetailerID : NSManagedObjectID {}
 @end
@@ -34,11 +40,23 @@ extern const struct RetailerAttributes {
 
 //- (BOOL)validateServerID:(id*)value_ error:(NSError**)error_;
 
-+ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ ;
-+ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ error:(NSError**)error_;
+@property (nonatomic, strong) NSSet *offers;
+
+- (NSMutableSet*)offersSet;
 
 + (id)fetchOneRetailerWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ ;
 + (id)fetchOneRetailerWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ error:(NSError**)error_;
+
++ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ ;
++ (NSArray*)fetchAllRetailers:(NSManagedObjectContext*)moc_ error:(NSError**)error_;
+
+@end
+
+@interface _Retailer (OffersCoreDataGeneratedAccessors)
+- (void)addOffers:(NSSet*)value_;
+- (void)removeOffers:(NSSet*)value_;
+- (void)addOffersObject:(Offer*)value_;
+- (void)removeOffersObject:(Offer*)value_;
 
 @end
 
@@ -55,5 +73,8 @@ extern const struct RetailerAttributes {
 
 - (int32_t)primitiveServerIDValue;
 - (void)setPrimitiveServerIDValue:(int32_t)value_;
+
+- (NSMutableSet*)primitiveOffers;
+- (void)setPrimitiveOffers:(NSMutableSet*)value;
 
 @end
