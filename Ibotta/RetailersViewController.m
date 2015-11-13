@@ -7,12 +7,13 @@
 //
 
 #import "RetailersViewController.h"
+#import "AppDelegate.h"
+#import "RetailerCell.h"
+#import "UIImageView+AFNetworking.h"
 #import "IbottaAPI.h"
 #import "SVProgressHUD.h"
 #import "UIColor+Ibotta.h"
 #import "Retailer.h"
-#import "AppDelegate.h"
-#import "RetailerCell.h"
 
 @interface RetailersViewController ()
 
@@ -24,51 +25,66 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    // Initialize Fetch Request
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Retailer"];
+    [self setTitle:@"Retailers"];
     
-    // Add Sort Descriptors
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(mocSaved:)
+                                                 name:NSManagedObjectContextDidSaveNotification
+                                               object:[AppDelegate sharedInstance].managedObjectContext];
+    
+    [self fetchRetailers];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Retailer"];
     [fetchRequest setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"serverID" ascending:YES]]];
     
-    // Initialize Fetched Results Controller
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                         managedObjectContext:[AppDelegate sharedInstance].managedObjectContext
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
-    // Configure Fetched Results Controller
     [self.fetchedResultsController setDelegate:self];
     
-    // Perform Fetch
     NSError *error = nil;
     [self.fetchedResultsController performFetch:&error];
     
     if (error) {
         NSLog(@"Unable to perform fetch.");
-        NSLog(@"%@, %@", error, error.localizedDescription);
+        NSLog(@"%@, %@", error, [error description]);
     }
     
-//    [SVProgressHUD setForegroundColor:[UIColor colorWithIbottaPink]];
-//    [SVProgressHUD setBackgroundColor:[UIColor colorWithIbottaBiege]];
-//    [SVProgressHUD showWithStatus:@"Loading..."];
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        [[IbottaAPI sharedInstance] retrieveRetailersWith:^(id data, NSError *error) {
-//            if (data != nil) {
-//                
-//                NSArray *retailers = [data objectForKey:@"retailers"];
-//                if (retailers.count > 0) {
-//                    [Retailer processResponse:retailers];
-//                }
-//                
-//            } else {
-//                NSLog(@"IbottaAPI Request failed.");
-//                NSLog(@"Error:\n%@", [error description]);
-//            }
-//        }];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [SVProgressHUD dismiss];
-//        });
-//    });
 }
+
+- (void)fetchRetailers {
+    
+    // TODO
+    // setup progress for deterministic loading indicator. perhaps with KVO
+    [SVProgressHUD setForegroundColor:[UIColor colorWithIbottaPink]];
+    [SVProgressHUD setBackgroundColor:[UIColor colorWithIbottaBiege]];
+    [SVProgressHUD showWithStatus:@"Loading..."];
+    
+    [[IbottaAPI sharedInstance] retrieveRetailersWith:^(id data, NSError *error) {
+        if (data != nil) {
+            
+            NSArray *retailers = [data objectForKey:@"retailers"];
+            if (retailers.count > 0) {
+                [Retailer processResponse:retailers];
+            }
+            
+        } else {
+            NSLog(@"IbottaAPI Request failed.");
+            NSLog(@"Error:\n%@", [error description]);
+        }
+    }];
+}
+
+- (void)mocSaved:(NSNotification*)notification {
+    
+//    NSLog(@"mocSaved:\n %@", [notification description]);
+    
+    [SVProgressHUD dismiss]; // dismiss any loading indicator
+}
+
+
+#pragma mark - NSFetchedResultsController Delegate
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView beginUpdates];
@@ -116,22 +132,26 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RetailerCell *cell = (RetailerCell *)[tableView dequeueReusableCellWithIdentifier:@"RetailerCell" forIndexPath:indexPath];
     
-    // Configure Table View Cell
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
 - (void)configureCell:(RetailerCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    // Fetch Record
+
     NSManagedObject *record = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    // Update Cell
     [cell.nameLbl setText:[record valueForKey:@"name"]];
-//    [cell.doneButton setSelected:[[record valueForKey:@"done"] boolValue]];
+    [cell.iconImgView setImageWithURL:[NSURL URLWithString:[record valueForKey:@"iconURL"]]];
+//    [cell.iconImgView setImageWithURL:[NSURL URLWithString:[record valueForKey:@"iconURL"]] placeholderImage:nil];
 }
 
 #pragma mark - UITableView Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 80.0;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

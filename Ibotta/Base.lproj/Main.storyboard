@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Retailers View Controller-->
@@ -17,27 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DEI-DR-P9Y">
-                                <rect key="frame" x="0.0" y="102" width="600" height="498"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DEI-DR-P9Y">
+                                <rect key="frame" x="0.0" y="-1" width="600" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RetailerCell" id="jo4-1u-4D2" customClass="RetailerCell">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RetailerCell" rowHeight="80" id="jo4-1u-4D2" customClass="RetailerCell">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jo4-1u-4D2" id="sYA-yh-75D">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ht-PR-bVg">
-                                                    <rect key="frame" x="29" y="0.0" width="170" height="43"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ht-PR-bVg">
+                                                    <rect key="frame" x="29" y="14" width="90" height="50"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgk-lO-58j">
-                                                    <rect key="frame" x="246" y="0.0" width="256" height="32"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Buy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgk-lO-58j">
+                                                    <rect key="frame" x="128" y="24" width="256" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="256" id="YDF-oT-CD1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" red="0.92549019610000005" green="0.3803921569" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dgk-lO-58j" firstAttribute="top" secondItem="sYA-yh-75D" secondAttribute="topMargin" constant="16" id="AIF-hd-ngL"/>
+                                                <constraint firstItem="Dgk-lO-58j" firstAttribute="centerY" secondItem="sYA-yh-75D" secondAttribute="centerY" id="G2s-u3-jKM"/>
+                                                <constraint firstItem="4ht-PR-bVg" firstAttribute="centerY" secondItem="sYA-yh-75D" secondAttribute="centerY" id="J76-Hk-kUf"/>
+                                                <constraint firstItem="4ht-PR-bVg" firstAttribute="top" secondItem="sYA-yh-75D" secondAttribute="topMargin" constant="6" id="bHg-J8-syL"/>
+                                                <constraint firstItem="Dgk-lO-58j" firstAttribute="leading" secondItem="4ht-PR-bVg" secondAttribute="trailing" constant="9" id="feP-t1-IKo"/>
+                                                <constraint firstItem="4ht-PR-bVg" firstAttribute="leading" secondItem="sYA-yh-75D" secondAttribute="leadingMargin" constant="21" id="k1Q-QP-r16"/>
+                                                <constraint firstItem="Dgk-lO-58j" firstAttribute="leading" secondItem="sYA-yh-75D" secondAttribute="leading" constant="128" id="mpv-hA-aFh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="iconImgView" destination="4ht-PR-bVg" id="F1m-3P-ij5"/>
@@ -52,6 +65,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DEI-DR-P9Y" secondAttribute="trailing" id="jpK-qC-NUn"/>
+                            <constraint firstItem="DEI-DR-P9Y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mHD-lt-Xru"/>
+                            <constraint firstItem="DEI-DR-P9Y" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="u8s-am-fIx"/>
+                            <constraint firstItem="DEI-DR-P9Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yqD-fu-ppS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aVT-CD-Q1g"/>
                     <connections>
@@ -60,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="371"/>
+            <point key="canvasLocation" x="633" y="487"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0MO-g8-Url">
@@ -70,15 +89,19 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Znw-iM-B8A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.93725490199999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.92549019610000005" green="0.3803921569" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IM9-3V-GZb"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Ua-p4-9Uy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcN-Cf-AyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="371"/>
+            <point key="canvasLocation" x="-187" y="487"/>
         </scene>
     </scenes>
 </document>

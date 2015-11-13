@@ -12,9 +12,9 @@
 @interface RetailersViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+- (void)fetchRetailers;
 
 @end
 

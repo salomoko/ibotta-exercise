@@ -14,5 +14,6 @@ typedef void (^ CompletionHandler)(id, NSError *error);
 
 + (instancetype)sharedInstance;
 - (void)retrieveRetailersWith:(CompletionHandler)completionHandler;
+- (void)retrieveOffersWith:(CompletionHandler)completionHandler;
 
 @end

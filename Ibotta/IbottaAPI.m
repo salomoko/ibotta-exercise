@@ -46,12 +46,28 @@ static NSString * const APIBaseURL = @"http://salomon.io/ibotta/";
     [operation start];
 }
 
-- (void)retrieveOffers {
+- (void)retrieveOffersWith:(CompletionHandler)completionHandler {
+    
+    NSString *string = [NSString stringWithFormat:@"%@Offers.json", APIBaseURL];
+    NSURL *url = [NSURL URLWithString:string];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        return completionHandler(responseObject,nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"AFHTTPRequestOperation:failure:\n%@", [error description]);
+        return completionHandler(nil,error);
+    }];
+    
+    [operation start];
     
 }
 
-- (void)retrieveLocations {
-    
-}
 
 @end
