@@ -50,17 +50,31 @@
     self.name = [offer objectForKey:@"name"];
     self.serverID = [offer objectForKey:@"id"];
     self.iconURL = [offer objectForKey:@"url"];
-    self.amount = [offer objectForKey:@"amount"];
+    self.amount = [self currencyValue:[offer objectForKey:@"amount"]];
     self.desc = [offer objectForKey:@"description"];
     self.totalLikes = [offer objectForKey:@"total_likes"];
     
-    NSArray *retailers = [offer objectForKey:@"retailers"];
-    
-    for (id retailer in retailers) {
-        self.retailer = retailer;
+    NSArray *rids = [offer objectForKey:@"retailers"];
+    for (id retailerID in rids) {
+        Retailer *retailer = [Retailer fetchOneRetailerWithServerID:[AppDelegate sharedInstance].managedObjectContext
+                                                           serverID:retailerID];
+        if ( retailer != nil )
+            [self addRetailersObject:retailer];
     }
     
+}
 
+- (NSDecimalNumber *)currencyValue:(id)value {
+    
+    if ([value class] == [NSDecimalNumber class]) {
+        return (NSDecimalNumber *)value;
+    }
+    
+    if ([value class] == [NSString class]) {
+        return [NSDecimalNumber decimalNumberWithString:value];
+    }
+    
+    return nil;
 }
 
 @end

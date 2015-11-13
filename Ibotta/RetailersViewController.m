@@ -13,6 +13,7 @@
 #import "IbottaAPI.h"
 #import "SVProgressHUD.h"
 #import "UIColor+Ibotta.h"
+#import "NSSet+Additions.h"
 #import "Retailer.h"
 #import "Offer.h"
 
@@ -79,7 +80,6 @@
         if (data != nil) {
             
             NSArray *offers = [data objectForKey:@"offers"];
-            NSLog(@"offers:\n%@", [offers description]);
             if (offers.count > 0) {
                 [Offer processResponse:offers];
             }
@@ -98,17 +98,17 @@
     [SVProgressHUD setForegroundColor:[UIColor colorWithIbottaPink]];
     [SVProgressHUD setBackgroundColor:[UIColor colorWithIbottaBiege]];
     [SVProgressHUD showWithStatus:@"Loading..."];
-    [SVProgressHUD popActivity];
 }
 
 - (void)mocSaved:(NSNotification*)notification {
     
     NSSet *mo = [notification.userInfo objectForKey:NSInsertedObjectsKey];
-
-//    [self fetchOffers]; // TODO only call this once!
-//    http://stackoverflow.com/questions/5837643/how-do-i-check-if-an-nsset-contains-an-object-of-a-kind-of-class
     
-    [SVProgressHUD dismiss]; // dismiss any loading indicator
+    if ([mo containsKindOfClass:[Retailer class]]) { // only fetch offers after retailers are saved
+        [self fetchOffers];
+    }
+    
+    [SVProgressHUD popActivity]; // dismiss any loading indicator
 }
 
 

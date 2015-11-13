@@ -13,7 +13,7 @@ extern const struct OfferAttributes {
 } OfferAttributes;
 
 extern const struct OfferRelationships {
-	__unsafe_unretained NSString *retailer;
+	__unsafe_unretained NSString *retailers;
 } OfferRelationships;
 
 @class Retailer;
@@ -59,15 +59,23 @@ extern const struct OfferRelationships {
 
 //- (BOOL)validateTotalLikes:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) Retailer *retailer;
+@property (nonatomic, strong) NSSet *retailers;
 
-//- (BOOL)validateRetailer:(id*)value_ error:(NSError**)error_;
+- (NSMutableSet*)retailersSet;
 
 + (id)fetchOneOfferWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ ;
 + (id)fetchOneOfferWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ error:(NSError**)error_;
 
 + (NSArray*)fetchAllOffers:(NSManagedObjectContext*)moc_ ;
 + (NSArray*)fetchAllOffers:(NSManagedObjectContext*)moc_ error:(NSError**)error_;
+
+@end
+
+@interface _Offer (RetailersCoreDataGeneratedAccessors)
+- (void)addRetailers:(NSSet*)value_;
+- (void)removeRetailers:(NSSet*)value_;
+- (void)addRetailersObject:(Retailer*)value_;
+- (void)removeRetailersObject:(Retailer*)value_;
 
 @end
 
@@ -97,7 +105,7 @@ extern const struct OfferRelationships {
 - (int32_t)primitiveTotalLikesValue;
 - (void)setPrimitiveTotalLikesValue:(int32_t)value_;
 
-- (Retailer*)primitiveRetailer;
-- (void)setPrimitiveRetailer:(Retailer*)value;
+- (NSMutableSet*)primitiveRetailers;
+- (void)setPrimitiveRetailers:(NSMutableSet*)value;
 
 @end

@@ -13,7 +13,7 @@ const struct OfferAttributes OfferAttributes = {
 };
 
 const struct OfferRelationships OfferRelationships = {
-	.retailer = @"retailer",
+	.retailers = @"retailers",
 };
 
 @implementation OfferID
@@ -104,7 +104,16 @@ const struct OfferRelationships OfferRelationships = {
 	[self setPrimitiveTotalLikes:@(value_)];
 }
 
-@dynamic retailer;
+@dynamic retailers;
+
+- (NSMutableSet*)retailersSet {
+	[self willAccessValueForKey:@"retailers"];
+
+	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"retailers"];
+
+	[self didAccessValueForKey:@"retailers"];
+	return result;
+}
 
 + (id)fetchOneOfferWithServerID:(NSManagedObjectContext*)moc_ serverID:(NSNumber*)serverID_ {
 	NSError *error = nil;

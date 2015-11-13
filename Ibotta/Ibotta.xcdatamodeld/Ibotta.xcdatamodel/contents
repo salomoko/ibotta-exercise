@@ -7,20 +7,20 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="totalLikes" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="retailer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Retailer" inverseName="offers" inverseEntity="Retailer" syncable="YES"/>
+        <relationship name="retailers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Retailer" inverseName="offers" inverseEntity="Retailer" syncable="YES"/>
     </entity>
     <entity name="Retailer" representedClassName="Retailer" syncable="YES">
         <attribute name="iconURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="offers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Offer" inverseName="retailer" inverseEntity="Offer" syncable="YES"/>
+        <relationship name="offers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Offer" inverseName="retailers" inverseEntity="Offer" syncable="YES"/>
     </entity>
     <fetchRequest name="allOffers" entity="Offer"/>
     <fetchRequest name="allRetailers" entity="Retailer"/>
     <fetchRequest name="oneOfferWithServerID" entity="Offer" predicateString="serverID == $serverID"/>
     <fetchRequest name="oneRetailerWithServerID" entity="Retailer" predicateString="serverID == $serverID"/>
     <elements>
+        <element name="Offer" positionX="187" positionY="-0" width="128" height="150"/>
         <element name="Retailer" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="Offer" positionX="-63" positionY="9" width="128" height="150"/>
     </elements>
 </model>
