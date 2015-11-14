@@ -1,8 +1,8 @@
-# README
+### README
 
-## To build project make sure you have Cocoapods and Mogenerator installed properly
+*To build project make sure you have Cocoapods and Mogenerator installed properly*
 
-### mogenerator
+#### mogenerator
 
 ```
 $ brew install mogenerator
@@ -14,7 +14,7 @@ Now make sure the Mogenerator target is created in Xcode project. Also make sure
 mogenerator --v2 -m Ibotta/Ibotta.xcdatamodeld -O Ibotta/Models --template-var arc=true
 ```
 
-### cocoapods
+#### cocoapods
 ```
 $ gem install cocoapods
 $ pod install
