@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Retailer.h"
 
-@interface OffersViewController : UIViewController
+@interface OffersViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+//NSFetchedResultsControllerDelegate
+
+@property (strong,nonatomic) Retailer *retailer;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

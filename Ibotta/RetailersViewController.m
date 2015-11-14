@@ -16,6 +16,7 @@
 #import "NSSet+Additions.h"
 #import "Retailer.h"
 #import "Offer.h"
+#import "OffersViewController.h"
 
 @interface RetailersViewController ()
 
@@ -52,6 +53,11 @@
         NSLog(@"Unable to perform fetch.");
         NSLog(@"%@, %@", error, [error description]);
     }
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:nil
+                                                                            action:nil];
     
 }
 
@@ -181,14 +187,19 @@
     return 80.0;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
-
 #pragma mark - Navigation
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    if ([segue.identifier isEqualToString:@"offersSegue"]) {
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        
+        Retailer *retailerSelected = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        OffersViewController *destViewController = [segue destinationViewController];
+        
+        [destViewController setRetailer:retailerSelected];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
