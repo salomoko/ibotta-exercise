@@ -199,19 +199,19 @@
 		A2F67EF91BF139C500EBA73C /* Ibotta */ = {
 			isa = PBXGroup;
 			children = (
-				A28FE92D1BF3F52500772039 /* Models */,
 				A2F67EFD1BF139C500EBA73C /* AppDelegate.h */,
 				A2F67EFE1BF139C500EBA73C /* AppDelegate.m */,
-				A2DF8F231BF5CD31001FFDFB /* ViewControllers */,
-				A2F67F031BF139C500EBA73C /* Main.storyboard */,
 				A2F67F091BF139C500EBA73C /* Assets.xcassets */,
-				A2F67F0B1BF139C500EBA73C /* LaunchScreen.storyboard */,
-				A2F67F0E1BF139C500EBA73C /* Info.plist */,
+				A2539F621BF426FF003A7327 /* Categories */,
 				A2F67F061BF139C500EBA73C /* Ibotta.xcdatamodeld */,
-				A2F67EFA1BF139C500EBA73C /* Supporting Files */,
 				A28FE9221BF3E81700772039 /* IbottaAPI.h */,
 				A28FE9231BF3E81700772039 /* IbottaAPI.m */,
-				A2539F621BF426FF003A7327 /* Categories */,
+				A2F67F0E1BF139C500EBA73C /* Info.plist */,
+				A2F67F0B1BF139C500EBA73C /* LaunchScreen.storyboard */,
+				A2F67F031BF139C500EBA73C /* Main.storyboard */,
+				A28FE92D1BF3F52500772039 /* Models */,
+				A2F67EFA1BF139C500EBA73C /* Supporting Files */,
+				A2DF8F231BF5CD31001FFDFB /* ViewControllers */,
 				A2DF8F241BF5CD46001FFDFB /* Views */,
 			);
 			path = Ibotta;
