@@ -4,7 +4,9 @@
 
 @interface Offer ()
 
-// Private interface goes here.
++ (Offer *)saveAttribute:(NSDictionary *)offer;
+- (void)build:(NSDictionary *)offer;
+- (NSDecimalNumber *)currencyValue:(id)value;
 
 @end
 
@@ -16,14 +18,14 @@
     
     NSMutableArray *allOffers = [[Offer fetchAllOffers:[AppDelegate sharedInstance].managedObjectContext] mutableCopy];
     
-    // enumerate thru remote retailers and insert/update local db
+    // enumerate thru remote offers and insert/update local db
     for (NSDictionary *offerDict in offers) {
         Offer *offer = [Offer saveAttribute:offerDict];
         
         if([allOffers containsObject:offer])
             [allOffers removeObject:offer];
     }
-    // cleanup retailers
+    // cleanup offers
     while([allOffers count])
     {
         [[AppDelegate sharedInstance].managedObjectContext deleteObject:[allOffers firstObject]];
@@ -35,7 +37,8 @@
 
 + (Offer *)saveAttribute:(NSDictionary *)offer {
     
-    Offer *resource = [Offer fetchOneOfferWithServerID:[AppDelegate sharedInstance].managedObjectContext serverID:[offer objectForKey:@"id"]];
+    Offer *resource = [Offer fetchOneOfferWithServerID:[AppDelegate sharedInstance].managedObjectContext
+                                              serverID:[offer objectForKey:@"id"]];
     
     if (!resource)
         resource = [Offer insertInManagedObjectContext:[AppDelegate sharedInstance].managedObjectContext];
@@ -50,7 +53,7 @@
     self.name = [offer objectForKey:@"name"];
     self.serverID = [offer objectForKey:@"id"];
     self.iconURL = [offer objectForKey:@"url"];
-    self.amount = [self currencyValue:[offer objectForKey:@"amount"]];
+    self.amount = [offer objectForKey:@"amount"];
     self.desc = [offer objectForKey:@"description"];
     self.totalLikes = [offer objectForKey:@"total_likes"];
     
@@ -66,13 +69,11 @@
 
 - (NSDecimalNumber *)currencyValue:(id)value {
     
-    if ([value class] == [NSDecimalNumber class]) {
+    if ([value class] == [NSDecimalNumber class])
         return (NSDecimalNumber *)value;
-    }
     
-    if ([value class] == [NSString class]) {
+    if ([value class] == [NSString class])
         return [NSDecimalNumber decimalNumberWithString:value];
-    }
     
     return nil;
 }

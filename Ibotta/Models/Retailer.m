@@ -3,7 +3,8 @@
 
 @interface Retailer ()
 
-// Private interface goes here.
++ (Retailer *)saveAttribute:(NSDictionary *)retailer;
+- (void)build:(NSDictionary *)retailer;
 
 @end
 

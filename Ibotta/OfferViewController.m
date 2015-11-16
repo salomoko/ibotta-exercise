@@ -22,7 +22,12 @@
     [self.descLbl setText:self.offer.desc];
     [self.descLbl sizeToFit];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar-logo.png"]];
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+    NSString *currencyAmount = [numberFormatter stringFromNumber:[self.offer amount]];
+    [self.amountLbl setText:currencyAmount];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar-logo"]];
     self.navigationItem.titleView = imageView;
 }
 

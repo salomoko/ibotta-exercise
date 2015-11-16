@@ -11,11 +11,11 @@
 
 @interface OfferViewController : UIViewController
 
-
 @property (strong,nonatomic) Offer *offer;
 @property (weak, nonatomic) IBOutlet UILabel *nameLbl;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImgView;
 @property (weak, nonatomic) IBOutlet UILabel *likesLbl;
 @property (weak, nonatomic) IBOutlet UILabel *descLbl;
+@property (weak, nonatomic) IBOutlet UILabel *amountLbl;
 
 @end

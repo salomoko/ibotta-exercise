@@ -27,7 +27,7 @@
     
     self.offers = [self.retailer.offers allObjects];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar-logo.png"]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar-logo"]];
     self.navigationItem.titleView = imageView;
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
@@ -79,8 +79,6 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    NSLog(@"prepare sender %@", [sender description]);
     
     if ([segue.identifier isEqualToString:@"offerSegue"]) {
         
