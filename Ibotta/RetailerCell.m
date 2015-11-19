@@ -7,6 +7,7 @@
 //
 
 #import "RetailerCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation RetailerCell
 
@@ -18,6 +19,12 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)prepareForReuse {
+    
+    [self.iconImgView cancelImageRequestOperation];
+    self.iconImgView.image = nil;
 }
 
 @end

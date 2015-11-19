@@ -7,7 +7,15 @@
 //
 
 #import "OfferCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation OfferCell
+
+- (void)prepareForReuse {
+    
+    [self.iconImgView cancelImageRequestOperation];
+    self.iconImgView.image = nil;
+}
+
 
 @end
